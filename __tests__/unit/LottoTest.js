@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import { ERROR } from '../../src/common/constants.js';
 import LottoValidator from '../../src/service/LottoValidator.js';
 

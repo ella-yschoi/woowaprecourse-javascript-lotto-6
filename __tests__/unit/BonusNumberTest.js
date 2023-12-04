@@ -1,5 +1,4 @@
 import BonusNumberValidator from '../../src/service/BonusNumberValidator.js';
-/* eslint-disable max-lines-per-function */
 import { ERROR } from '../../src/common/constants.js';
 
 describe('보너스 번호 테스트', () => {

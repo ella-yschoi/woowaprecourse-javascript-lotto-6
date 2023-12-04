@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import { printMessage } from '../../src/common/utils.js';
 import OutputView from '../../src/view/OutputView.js';
 import { UTILS, LOG, STATISTICS } from '../../src/common/constants.js';
