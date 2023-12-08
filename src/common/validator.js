@@ -2,10 +2,12 @@ import { UTILS } from './constants.js';
 
 const isDivisibleByUnit = (input, unit) => input % unit === UTILS.zero;
 
-const isCommaSeparated = (input, length) => {
-  const numbers = input.split(UTILS.comma).map(num => num.trim());
-  const isValidFormat = UTILS.number_comma.test(input);
-  return isValidFormat && numbers.length === length && numbers.every(num => !Number.isNaN(Number(num)));
+const isCommaSeparated = (input, expectedLength) => {
+  if (!UTILS.number_comma.test(input)) {
+    return false;
+  }
+  const numbers = input.split(UTILS.comma).map(num => Number(num.trim()));
+  return numbers.length === expectedLength && numbers.every(num => !Number.isNaN(num));
 };
 
 const isStringLengthEqualTo = (input, length) => {
