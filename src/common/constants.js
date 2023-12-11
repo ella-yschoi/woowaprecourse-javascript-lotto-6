@@ -38,7 +38,9 @@ const ERROR = Object.freeze({
 const STATISTICS = Object.freeze({
   winning_statistics: '\n당첨 통계\n---\n',
   profit_prefix: '총 수익률은 ',
-  profit_postfix: '%입니다.',
+  profit_postfix: '% 입니다🥳',
+  loss_prefix: '총 손실률은 ',
+  loss_postfix: '% 입니다😭',
   count: '개',
 });
 

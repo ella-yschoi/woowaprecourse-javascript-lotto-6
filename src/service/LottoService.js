@@ -3,6 +3,7 @@ import { LOTTO, RANKING, STATISTICS } from '../common/constants.js';
 import Lotto from '../Lotto.js';
 import { generateRandomNumber } from '../common/utils.js';
 import Profit from '../model/Profit.js';
+import Loss from '../model/Loss.js';
 import Ranking from '../model/Ranking.js';
 
 class LottoService {
@@ -13,14 +14,21 @@ class LottoService {
   
   #profit;
 
+  #loss;
+
   constructor() {
     this.#lottos = [];
     this.#ranking = new Ranking();
     this.#profit = new Profit();
+    this.#loss = new Loss();
   }
 
   calculateProfit(moneyAmount) {
     this.#profit.calculateProfit(moneyAmount, this.#ranking);
+  }
+
+  calculateLoss(moneyAmount) {
+    this.#loss.calculateLoss(moneyAmount, this.#ranking);
   }
 
   compareLotto(winningNumbers, bonusNumber) {
@@ -43,6 +51,10 @@ class LottoService {
 
   getProfit() {
     return this.#profit.getAmount();
+  }
+
+  getLoss() {
+    return this.#loss.getAmount();
   }
 
   getStatisticsArray() {

@@ -19,6 +19,11 @@ class OutputView {
     const formattedProfit = profit.toLocaleString();
     printMessage(STATISTICS.profit_prefix + formattedProfit + STATISTICS.profit_postfix);
   };  
+
+  static printLoss(loss) {
+    const formattedLoss = loss.toLocaleString();
+    printMessage(STATISTICS.loss_prefix + formattedLoss + STATISTICS.loss_postfix);
+  };  
 };
 
 export default OutputView;

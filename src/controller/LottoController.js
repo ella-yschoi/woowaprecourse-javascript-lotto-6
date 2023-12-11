@@ -68,6 +68,9 @@ class LottoController {
     
     this.#lottoService.calculateProfit(this.#money.getAmount());
     this.#printProfit();
+
+    this.#lottoService.calculateLoss(this.#money.getAmount());
+    this.#printLoss();
   };
 
   async #getWinningNumbers() {
@@ -109,6 +112,10 @@ class LottoController {
 
   #printProfit() {
     OutputView.printProfit(this.#lottoService.getProfit());
+  };
+
+  #printLoss() {
+    OutputView.printLoss(this.#lottoService.getLoss());
   };
 };
 
