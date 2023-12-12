@@ -40,7 +40,7 @@ class LottoService {
 
   generateLottos(lottoCount) {
     for (let count = 0; count < lottoCount; count += 1) {
-      const generatedNumber = generateRandomNumber(LOTTO.min_number, LOTTO.max_number, LOTTO.max_match);
+      const generatedNumber = generateRandomNumber(LOTTO.min_number, LOTTO.max_winning_number, LOTTO.max_match);
       this.#lottos.push(new Lotto(generatedNumber));
     }
   }

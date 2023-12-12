@@ -1,7 +1,8 @@
 const LOTTO = Object.freeze({
   money_unit: 1000,
   min_number: 1,
-  max_number: 45,
+  max_bonus_number: 20,
+  max_winning_number: 45,
   max_match: 6,
 });
 
@@ -32,7 +33,8 @@ const ERROR = Object.freeze({
   lotto_length: '로또 번호는 6개여야 합니다.',
   empty: '값을 입력해야 합니다.',
   numeric: '양의 정수여야 합니다.',
-  range: '1 이상 45 이하의 숫자여야 합니다.',
+  winning_range: '당첨 번호는 1 이상 45 이하의 숫자여야 합니다.',
+  bonus_range: '보너스 번호는 1 이상 20 이하의 숫자여야 합니다.',
 });
 
 const STATISTICS = Object.freeze({

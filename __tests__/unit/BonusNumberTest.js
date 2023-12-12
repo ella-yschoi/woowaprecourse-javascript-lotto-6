@@ -22,10 +22,10 @@ describe('보너스 번호 테스트', () => {
     expect(() => validator.validate(winningNumbers)).toThrow(ERROR.numeric);
   });
 
-  test('보너스 번호가 1이상 45 이하가 아닐 경우 실패', () => {
-    const outOfRangeInput = 50;
+  test('보너스 번호가 1이상 20 이하가 아닐 경우 실패', () => {
+    const outOfRangeInput = 30;
     const validator = new BonusNumberValidator(outOfRangeInput);
-    expect(() => validator.validate(winningNumbers)).toThrow(ERROR.range);
+    expect(() => validator.validate(winningNumbers)).toThrow(ERROR.bonus_range);
   });
 
   test('보너스 번호가 당첨 번호와 중복된 경우 실패', () => {

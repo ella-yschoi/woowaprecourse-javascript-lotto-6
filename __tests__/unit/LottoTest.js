@@ -23,7 +23,7 @@ describe('로또 번호 테스트', () => {
   test('로또의 번호가 1 이상 45 이하가 아니면 실패', () => {
     const invalidInput = [1, 2, 3, 4, 5, 46];
     const lottoValidator = new LottoValidator(invalidInput);
-    expect(() => lottoValidator.validate()).toThrow(ERROR.range);
+    expect(() => lottoValidator.validate()).toThrow(ERROR.winning_range);
   });
 
   test('로또의 번호가 중복되었다면 실패', () => {

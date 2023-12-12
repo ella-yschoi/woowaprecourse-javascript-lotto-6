@@ -31,8 +31,8 @@ class LottoValidator {
 
   #validateRange() {
     this.input.forEach((number) => {
-      if (!isInRange(number, LOTTO.min_number, LOTTO.max_number)) {
-        throwError(ERROR.range);
+      if (!isInRange(number, LOTTO.min_number, LOTTO.max_winning_number)) {
+        throwError(ERROR.winning_range);
       }
     });
   };

@@ -1,6 +1,5 @@
 import { ERROR, LOTTO } from '../common/constants.js';
 import { isElementInTarget, isInRange, isNumeric } from '../common/validator.js';
-
 import { throwError } from '../common/utils.js';
 
 class BonusNumberValidator {
@@ -30,8 +29,8 @@ class BonusNumberValidator {
   };
 
   #validateRange() {
-    if (!isInRange(this.input, LOTTO.min_number, LOTTO.max_number)) {
-      throwError(ERROR.range);
+    if (!isInRange(this.input, LOTTO.min_number, LOTTO.max_bonus_number)) {
+      throwError(ERROR.bonus_range);
     }
   };
 
